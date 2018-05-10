@@ -97,7 +97,7 @@ extension ViewController {
             let classification = predictor.getLabel(key: prediction.identifier)
             
             // Checks last letter for an 'e' for correct grammar ('ein' and 'eine')
-            let lastCharacterOfClassification = classification[classification.characters.index(classification.index(of: classification.last!)!, offsetBy: -2)]
+            let lastCharacterOfClassification = classification[classification.index(classification.index(of: classification.last!)!, offsetBy: -2)]
             if lastCharacterOfClassification == "e" {
                 confidenceLabelLastPart.append("e")
             }
